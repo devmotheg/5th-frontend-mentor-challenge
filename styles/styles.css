@@ -1,0 +1,259 @@
+/*!
+  @author Mohamed Muntasir
+  @link https://github.com/devmotheg
+  */
+
+/* General */
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+body {
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+  background: url("../images/bg-pattern-top-mobile.svg"),
+    url("../images/bg-pattern-bottom-mobile.svg") white;
+  background-repeat: no-repeat;
+  background-position: top left, bottom center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100vw;
+  min-width: 345px;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+blockquote,
+p {
+  margin: 0;
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  body {
+    font-size: clamp(11px, 1vw, 15px);
+    background-image: url("../images/bg-pattern-top-desktop.svg"),
+      url("../images/bg-pattern-bottom-desktop.svg");
+  }
+}
+
+/* Container */
+
+main {
+  margin-top: calc(50em / 15);
+  width: 90%;
+  min-width: 345px;
+  display: grid;
+  gap: calc(40em / 15);
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  main {
+    max-width: 1200px;
+    gap: calc(80em / 15);
+  }
+}
+
+/* Proof half */
+
+section:first-of-type {
+  display: grid;
+  gap: calc(40em / 15);
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  section:first-of-type {
+    display: flex;
+  }
+}
+
+/* Ad */
+
+h1 {
+  color: hsl(300, 43%, 22%);
+  width: 80%;
+  text-align: center;
+  margin: 0 auto calc(10em / 15) auto;
+  font-size: calc(31.5em / 15);
+}
+
+.advertise p {
+  color: hsl(300, 43%, 22%);
+  text-align: center;
+  margin: auto;
+  line-height: 1.8em;
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  .advertise {
+    width: 59%;
+  }
+
+  h1,
+  .advertise p {
+    text-align: left;
+    margin: 0;
+  }
+
+  h1 {
+    width: 75%;
+    font-size: calc(48.5em / 15);
+    margin-bottom: calc(2em / 15);
+  }
+
+  .advertise p {
+    width: 71%;
+  }
+}
+
+/* Ratings */
+
+ul {
+  margin: auto;
+  background: hsl(300, 24%, 96%);
+  border-radius: 10px;
+  padding: calc(15em / 15);
+  margin-bottom: calc(18em / 15);
+}
+
+li {
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  text-align: center;
+}
+
+.stars {
+  text-align: center;
+  margin-bottom: calc(18em / 18);
+}
+
+.stars img:not(.stars img:last-child) {
+  margin-right: calc(4em / 15);
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  .ratings {
+    width: 41%;
+    align-self: flex-end;
+  }
+
+  ul {
+    display: flex;
+    padding: calc(21em / 15) 0;
+  }
+
+  ul:last-of-type {
+    margin-bottom: calc(18em / 15);
+  }
+
+  li {
+    align-self: center;
+  }
+
+  .stars {
+    margin: 0 calc(30em / 15);
+  }
+
+  ul:nth-child(2) {
+    transform: translateX(calc(-50em / 15));
+  }
+
+  ul:nth-child(1) {
+    transform: translateX(calc(-100em / 15));
+  }
+}
+
+/* Feedback half */
+
+section:last-of-type {
+  display: grid;
+  gap: calc(20em / 15);
+  margin-bottom: calc(50em / 15);
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  section:last-of-type {
+    display: flex;
+    gap: calc(30em / 15);
+    margin-bottom: calc((40em + 50em) / 15);
+  }
+}
+
+/* Testimonials */
+
+.testimonial {
+  background: hsl(300, 43%, 22%);
+  border-radius: 12px;
+  padding: calc(35em / 15);
+  margin: auto;
+}
+
+.person {
+  display: flex;
+  grid-template-areas: "image name" "image state";
+  align-items: center;
+  margin-bottom: calc(29em / 15);
+}
+
+.person img {
+  grid-area: image;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: calc(30em / 15);
+}
+
+h2 {
+  color: white;
+  font-weight: 500;
+  grid-area: name;
+  font-size: inherit;
+  margin: calc(5em / 15) 0;
+}
+
+.person-info p {
+  color: hsl(333, 80%, 67%, 0.7);
+  font-weight: 400;
+  grid-area: state;
+  font-size: inherit;
+}
+
+.testimonial blockquote {
+  color: white;
+  line-height: 1.8em;
+  font-size: calc(13em / 15);
+  width: 98%;
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  section:last-of-type > div:nth-child(2) {
+    transform: translateY(calc(20em / 15));
+  }
+
+  section:last-of-type > div:nth-child(3) {
+    transform: translateY(calc(40em / 15));
+  }
+}
